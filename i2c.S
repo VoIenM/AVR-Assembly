@@ -1,22 +1,3 @@
-; TODO: Setup cursor position and draw an ascii character on screen
-; TODO: Choose internal registers to be used to pass data between routines by value
-; TODO: Utility routines to handle 4-bit transfers of data 
-; TODO: Convert the HITACHI instructions to the P0-7 bits required to send the instructions
-; TODO: What data do I have to send to write a char to the lcd display
-
-
-; TODO: Setup a busy flag read instruction to determine when to call a write instruction
-; TODO: Setup entry mode set
-
-; NOTE: Responses and start stop conditions are done via TWCR
-; NOTE: Why does writting to DDRAM when AC = 0 not produce the letter H ????
-; NOTE: Know where the AC will be after we write to DDRAM
-
-; IMPORTANT: LCD isn't ready for transmission after we've called ReturnHome and are ready to send more data and we can't just wait n amount of
-; IMPORTANT: Initi the LCD to 4-bit Interface via FunctionSet routine because default is 8
-; NOTE: Read the Documenation more carefully next time
-
-
 #define RAM_START_H 0x08
 #define RAM_START_L 0xff
 
